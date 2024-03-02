@@ -369,6 +369,10 @@ tools:
     title: So sánh văn bản
     description: So sánh hai văn bản và xem sự khác biệt giữa chúng.
 
+  text-diff-analyzer:
+    title: Text diff analyzer
+    description: Compare two texts and see the differences between them.
+
   otp-generator:
     title: Tạo mã OTP
     description: Tạo và xác thực mã OTP (mật khẩu một lần) dựa trên thời gian cho xác thực đa yếu tố.

@@ -191,6 +191,7 @@ declare module '@vue/runtime-core' {
     TemperatureConverter: typeof import('./src/tools/temperature-converter/temperature-converter.vue')['default']
     TextareaCopyable: typeof import('./src/components/TextareaCopyable.vue')['default']
     TextDiff: typeof import('./src/tools/text-diff/text-diff.vue')['default']
+    TextDiffAnalyzer: typeof import('./src/tools/text-diff-analyzer/text-diff-analyzer.vue')['default']
     TextStatistics: typeof import('./src/tools/text-statistics/text-statistics.vue')['default']
     TextToBinary: typeof import('./src/tools/text-to-binary/text-to-binary.vue')['default']
     TextToNatoAlphabet: typeof import('./src/tools/text-to-nato-alphabet/text-to-nato-alphabet.vue')['default']

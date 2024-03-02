@@ -376,6 +376,10 @@ tools:
     title: 文本比较
     description: 比较两个文本并查看它们之间的差异。
 
+  text-diff-analyzer:
+    title: 文本差异分析器
+    description: 比较两个文本之间的差异，并进行提取去重合并&差异部分&共同部分。
+
   otp-generator:
     title: OTP代码生成器
     description: 为多因素身份验证生成和验证基于时间的OTP（一次性密码）。

@@ -380,6 +380,10 @@ tools:
     title: Text diff
     description: Compare two texts and see the differences between them.
 
+  text-diff-analyzer:
+    title: Text diff analyzer
+    description: Compare two texts and see the differences between them.
+
   otp-generator:
     title: OTP code generator
     description: Generate and validate time-based OTP (one time password) for multi-factor authentication.
