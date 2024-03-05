@@ -1,7 +1,7 @@
 export { textToBase64, base64ToText, isValidBase64, removePotentialDataAndMimePrefix };
 
 function textToBase64(str: string, { makeUrlSafe = false }: { makeUrlSafe?: boolean } = {}) {
-  const encoded = window.btoa(str);
+  const encoded = window.btoa(unescape(encodeURIComponent(str)));
   return makeUrlSafe ? makeUriSafe(encoded) : encoded;
 }
 
@@ -16,7 +16,7 @@ function base64ToText(str: string, { makeUrlSafe = false }: { makeUrlSafe?: bool
   }
 
   try {
-    return window.atob(cleanStr);
+    return decodeURIComponent(escape(window.atob(cleanStr)));
   }
   catch (_) {
     throw new Error('Incorrect base64 string');
