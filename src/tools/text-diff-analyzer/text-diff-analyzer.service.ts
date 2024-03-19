@@ -44,6 +44,22 @@ function diff(value1: string[], value2: string[], key1: string[], key2: string[]
   return diff_result;
 }
 
+function append(value1: string[], value2: string[], sep: string) {
+  // 进行拼接
+  const append_result: string[] = [];
+  for (let i = 0; i < value1.length; i++) {
+    if (value1[i].trim() === '') {
+      continue;
+    }
+    let v2 = value2[i % value2.length];
+    if (!v2.startsWith(sep)) {
+      v2 = sep + v2;
+    }
+    append_result.push(value1[i] + v2);
+  }
+  return append_result;
+}
+
 function analyzer(
   input1: string,
   input2: string,
@@ -58,7 +74,7 @@ function analyzer(
   const value2 = input2.split('\n');
   let key1 = value1;
   let key2 = value2;
-  if (!preCut) {
+  if (!preCut || mode === 'append') {
     key1 = input1.split('\n');
     key2 = input2.split('\n');
   }
@@ -92,6 +108,9 @@ function analyzer(
       break;
     case 'diff':
       analyzer_result = diff(value1, value2, key1, key2);
+      break;
+    case 'append':
+      analyzer_result = append(value1, value2, sep);
       break;
   }
   if (lineSort) {

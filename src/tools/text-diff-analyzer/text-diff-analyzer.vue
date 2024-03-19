@@ -37,6 +37,7 @@ const result2 = computed(() => withDefaultOnError(() => analyzer(get(text2), get
           { label: '合并', value: 'merge' },
           { label: '差异', value: 'diff' },
           { label: '共同', value: 'duplicate' },
+          { label: '拼接', value: 'append' },
         ]"
       />
       <n-form-item label="排序 :" label-placement="left">
